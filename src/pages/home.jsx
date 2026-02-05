@@ -41,10 +41,10 @@ const TrentGONewsletter = (props) => {
                   src={happenopenings}
                   alt="Featured"
                   className="card-main-img"
-                  onClick={()=>window.open('/newsletter-app/Articles?type=th','_blank')}
+                  onClick={()=>window.open('/newsletter-app_v3/Articles?type=th','_blank')}
                 />
                
-                <div className="new-card-hover-content" style={{ backgroundImage: `url(${happenopenings})`, backgroundSize: 'cover', backgroundPosition: 'center' }}  onClick={()=>window.open('/newsletter-app/Articles?type=th','_blank')}>
+                <div className="new-card-hover-content" style={{ backgroundImage: `url(${happenopenings})`, backgroundSize: 'cover', backgroundPosition: 'center' }}  onClick={()=>window.open('/newsletter-app_v3/Articles?type=th','_blank')}>
                   
                     <div className="hover-item">
                       <div className="hover-text">
@@ -70,10 +70,10 @@ const TrentGONewsletter = (props) => {
                   src={featurearticle}
                   alt="Featured Articles"
                   className="card-main-img"
-                  onClick={()=>window.open('/newsletter-app/Articles?type=feature','_blank')}
+                  onClick={()=>window.open('/newsletter-app_v3/Articles?type=feature','_blank')}
                 />
 
-                <div className="new-card-hover-content" style={{ backgroundImage: `url(${featurearticle})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={()=>window.open('/newsletter-app/Articles?type=feature','_blank')}>
+                <div className="new-card-hover-content" style={{ backgroundImage: `url(${featurearticle})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={()=>window.open('/newsletter-app_v3/Articles?type=feature','_blank')}>
                  <div className="hover-text">
                   
                  </div>
@@ -115,9 +115,9 @@ const TrentGONewsletter = (props) => {
                   src={po}
                   alt="Card 2"
                   className="card-main-img"
-                  onClick={()=>window.open('/newsletter-app/Articles?type=po','_blank')}
+                  onClick={()=>window.open('/newsletter-app_v3/Articles?type=po','_blank')}
                 />
-                <div className="new-card-hover-content" style={{ backgroundImage: `url(${po})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={()=>window.open('/newsletter-app/Articles?type=po','_blank')}>
+                <div className="new-card-hover-content" style={{ backgroundImage: `url(${po})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={()=>window.open('/newsletter-app_v3/Articles?type=po','_blank')}>
                   {/* {props.marketIndex?.map((card, index) => (
                     <div key={index} className="hover-item">
                       <img
@@ -151,12 +151,12 @@ const TrentGONewsletter = (props) => {
                   src={hesai}
                   alt="Featured Articles"
                   className="card-main-img"
-                  onClick={()=>window.open('/newsletter-app/Articles?type=mfs','_blank')}
+                  onClick={()=>window.open('/newsletter-app_v3/Articles?type=mfs','_blank')}
                 />
                 <div
                   className="new-card-hover-content"
                   style={{ backgroundImage: `url(${hesai})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                  onClick={()=>window.open('/newsletter-app/Articles?type=mfs','_blank')}
+                  onClick={()=>window.open('/newsletter-app_v3/Articles?type=mfs','_blank')}
                 >
                   {/* <div className="hover-item">
                     <div className="hover-text">
