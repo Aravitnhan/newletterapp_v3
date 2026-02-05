@@ -41,15 +41,16 @@ const TrentGONewsletter = (props) => {
                   src={happenopenings}
                   alt="Featured"
                   className="card-main-img"
+                  onClick={()=>window.open('/newsletter-app/Articles?type=th','_blank')}
                 />
                
-                <div className="new-card-hover-content" style={{ backgroundImage: `url(${happenopenings})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="new-card-hover-content" style={{ backgroundImage: `url(${happenopenings})`, backgroundSize: 'cover', backgroundPosition: 'center' }}  onClick={()=>window.open('/newsletter-app/Articles?type=th','_blank')}>
                   
                     <div className="hover-item">
                       <div className="hover-text">
-                     <h6 id='happenings'>TrentGO Updates</h6>
+                     {/* <h6 id='happenings'>TrentGO Updates</h6> */}
                    
-                    <p>Checkout the latest update of TrentGo.</p>
+                    {/* <p>Checkout the latest update of TrentGo.</p>
                     <a
                       href="/feteatureArticles"
                       target="_blank"
@@ -57,7 +58,7 @@ const TrentGONewsletter = (props) => {
                       className="btn btn-danger btn-sm"
                     >
                       Read more
-                    </a>
+                    </a> */}
                     </div>
                     
                   </div>
@@ -150,12 +151,14 @@ const TrentGONewsletter = (props) => {
                   src={hesai}
                   alt="Featured Articles"
                   className="card-main-img"
+                  onClick={()=>window.open('/newsletter-app/Articles?type=mfs','_blank')}
                 />
                 <div
                   className="new-card-hover-content"
                   style={{ backgroundImage: `url(${hesai})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  onClick={()=>window.open('/newsletter-app/Articles?type=mfs','_blank')}
                 >
-                  <div className="hover-item">
+                  {/* <div className="hover-item">
                     <div className="hover-text">
                       <h6>Monthly Featured Supplier</h6>
                       <p>Hesai is a advanced LiDAR sensors used in ADAS, autonomous vehicles, and robotics</p>
@@ -167,7 +170,7 @@ const TrentGONewsletter = (props) => {
                         {"Read More"}
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
