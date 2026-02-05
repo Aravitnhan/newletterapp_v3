@@ -114,9 +114,10 @@ const TrentGONewsletter = (props) => {
                   src={po}
                   alt="Card 2"
                   className="card-main-img"
+                  onClick={()=>window.open('/newsletter-app/Articles?type=po','_blank')}
                 />
-                <div className="card-hover-content">
-                  {props.marketIndex?.map((card, index) => (
+                <div className="new-card-hover-content" style={{ backgroundImage: `url(${po})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={()=>window.open('/newsletter-app/Articles?type=po','_blank')}>
+                  {/* {props.marketIndex?.map((card, index) => (
                     <div key={index} className="hover-item">
                       <img
                         src={card.image}
@@ -140,7 +141,7 @@ const TrentGONewsletter = (props) => {
                         </a>
                       </div>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </div>
 

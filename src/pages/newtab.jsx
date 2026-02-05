@@ -125,8 +125,7 @@ const NewTab = () => {
                 // badgeColor: "#1ea06e",
                 title: "Why Data‑Driven Ports Actually Win",
                 description: `
-        I’ve seen a major terminal grind to a halt because the phones were cut off (bill overlooked and not paid on time). That’s when many of us realised that the operations literally ran on WhatsApp. That wasn’t an exception. It was a glimpse of how fragile things can be.
-      `,
+                    I’ve seen a major terminal grind to a halt because the phones were cut off (bill overlooked and not paid on time). That’s when many of us realised that the operations literally ran on WhatsApp. That wasn’t an exception. It was a glimpse of how fragile things can be.`,
                 url: "https://www.linkedin.com/pulse/why-datadriven-ports-actually-win-jon-arnup-gkbbc/?trackingId=o3NfEKJlRxaNkwQjoI2KAQ%3D%3D",
                 buttonText: "Read More"
             },
@@ -232,14 +231,44 @@ const NewTab = () => {
                 <div className="page-layout">
                     {/* ================= LEFT CONTENT ================= */}
                     <div className="content-area">
+                    <h6>{type==='feature'?"Featured Article":'' }</h6>
+                    {
+                      type==='feature'?
+                      
+                      sampleData.contentCards?.map((card, index) => (
+                    <div key={index} className="hover-item">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="hover-thumb"
+                      />
+                      <div className="hover-text">
+                        <h6>{card.title}</h6>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: card.description,
+                          }}
+                        />
+                        <a
+                          href={card.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-danger btn-sm"
+                        >
+                          {card.buttonText || "Read more"}
+                        </a>
+                      </div>
+                    </div>
+                  )):
+                    
                         <div>
                             <iframe
-                                src={type==='feature'?'https://www.linkedin.com/newsletters/the-trent-industry-digest-7313162994404810752/':type==='po'?'https://tradingeconomics.com':type==='mfs'?'https://www.hesaitech.com/':type==='th'?'https://www.trentgo.com/news/':''}
+                                src={type==='po'?'https://tradingeconomics.com':type==='mfs'?'https://www.hesaitech.com/':type==='th'?'https://www.trentgo.com/news/':''}
                                 title="External site"
                                 width="100%"
                                 height="500"
                                 style={{ border: "1px solid #ccc" }} />
-                        </div>
+                        </div>}
                         {/* ROW 1 */}
                         {/* <div className="expand-row">
 
