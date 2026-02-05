@@ -225,13 +225,12 @@ const NewTab = () => {
                 <TopLeaderboardAd adUrl={sampleData.adImg} adImg={sampleData.adTopImg} />
 
                 {/* Header */}
-                <HeaderSection navUrls={sampleData.navUrls} logoSrc={sampleData.logoSrc} />
+                <HeaderSection navUrls={sampleData.navUrls} logoSrc={sampleData.logoSrc} type={type} />
 
                 {/* Custom 2-Column Layout (NO LEFT SIDEBAR) */}
                 <div className="page-layout">
                     {/* ================= LEFT CONTENT ================= */}
                     <div className="content-area">
-                    <h6>{type==='feature'?"Featured Article":type==='po'?'Pricing Outlook':type==='mfs'?'Monthly Featured Supplier':type==='th'?'TrentGO Updates':'' }</h6>
                     {
                       type==='feature'?
                       sampleData.contentCards?.map((card, index) => (

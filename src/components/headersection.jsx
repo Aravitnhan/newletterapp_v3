@@ -1,8 +1,25 @@
 import React, { useState } from "react";
-
-const HeaderSection = ({ logoSrc }) => {
+import { useNavigate } from "react-router-dom";
+const HeaderSection = ({ logoSrc, type }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
+  let typevalue = '';
+  switch (type) {
+    case 'feature':
+      typevalue = 'Featured Articles'
+      break
+    case 'po':
+      typevalue = 'Pricing Outlook'
+      break
+    case 'mfs':
+      typevalue = 'Featured Supplier'
+      break
+    case 'th':
+      typevalue = 'TrentGoUpdates'
+      break
+
+  }
+  const Navigate = useNavigate();
   return (
     <>
       <header className="modern-header shadow-sm ">
@@ -25,19 +42,26 @@ const HeaderSection = ({ logoSrc }) => {
             </div>
           </div>
 
+
           {/* CENTER (Desktop only nav) */}
           <div className="navBar-container desktop-only">
-            <nav className="header-nav">
-              <a href="#">Featured Articles</a>
-              <a href="#">Pricing Outlook</a>
-              <a href="#happenings">Updates</a>
-              <a href="#sponser">Featured Supplier</a>
-            </nav>
+
+            {type ? <div><nav className="header-nav"><span className="bi bi-house-door" style={{ cursor: 'pointer' }} onClick={() => Navigate('/')}> Home </span> <strong><span href="#">{typevalue}</span></strong> </nav></div> :
+              <nav className="header-nav">
+                <a href="#">Featured Articles</a>
+                <a href="#">Pricing Outlook</a>
+                <a href="#happenings">Updates</a>
+                <a href="#sponser">Featured Supplier</a>
+              </nav>
+            }
+
+
+
           </div>
 
           {/* RIGHT */}
           <div className="header-right">
-
+           
             {/* Search + Hamburger (always visible, responsive) */}
             <div className="search-hamburger-row">
               <input
@@ -72,15 +96,20 @@ const HeaderSection = ({ logoSrc }) => {
             >
               ✕
             </button>
-
-            <a onClick={() => setShowMobileNav(false)} href="#">Featured Articles</a>
-            <a onClick={() => setShowMobileNav(false)} href="#">Market Index</a>
-            <a onClick={() => setShowMobileNav(false)} href="#happenings">Updates</a>
-            <a onClick={() => setShowMobileNav(false)} href="#sponser">Sponsor Supplier</a>
-
+            {type ? <span className="bi bi-house-door" style={{ cursor: 'pointer' }} onClick={() => Navigate('/')}> Home </span> :
+              <li>
+                <ul><a onClick={() => setShowMobileNav(false)} href="#">Featured Articles</a></ul>
+                <ul><a onClick={() => setShowMobileNav(false)} href="#">Market Index</a></ul>
+                <ul> <a onClick={() => setShowMobileNav(false)} href="#happenings">Updates</a></ul>
+                <ul> <a onClick={() => setShowMobileNav(false)} href="#sponser">Sponsor Supplier</a></ul>
+              </li>
+            }
             <button className="subscribe-btn mobile-subscribe">
               Subscribe
             </button>
+
+
+
           </div>
         </div>
       )}
