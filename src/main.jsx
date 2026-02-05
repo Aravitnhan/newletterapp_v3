@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App />} />
       <Route path="/Articles" element={<NewTab />} />
     </Routes>
+
   </BrowserRouter>
 </StrictMode>
 );
